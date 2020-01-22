@@ -1,0 +1,45 @@
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+// The reducer class
+public class SumReducer extends Reducer<TupleWritable, Text, TupleWritable, Text>
+{
+  // The reduce method runs once for each key received after the shuffle phase
+  @Override
+  public void reduce(TupleWritable key, Iterable<Text> values, Context context)
+      throws IOException, InterruptedException
+  {
+    //int wordCount = 0;
+    /*int Low = 0;
+    int Medium = 0;
+    int High = 0;*/
+    
+    // Iterate over the values passed to us by the mapper
+    for (Text value : values)
+    {
+      //wordCount += value.get();
+      // Add the value to the word count counter for this key.
+      /*if (value.get() <= 500)
+      {
+        Low += value.get();
+      }
+      else if (value.get() >= 1501)
+      {
+        High += value.get();
+      }
+      else
+      {
+        Medium += value.get();
+      }*/
+
+      context.write(key, Text);
+    }
+    
+    // Emit the word accompanied by its final count
+	//String bob = 
+
+  }
+}

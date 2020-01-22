@@ -1,0 +1,1 @@
+println("Month: " + a._1 + ", count: " + a._2 + ", hash tag name: " + a._3)

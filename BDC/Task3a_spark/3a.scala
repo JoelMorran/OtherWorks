@@ -1,0 +1,10 @@
+val lines = sc.textFile("file:/home/cloudera/Desktop/Assignmentbdc/Assignmentbdc/docword.txt")
+val line = sc.textFile("file:/home/cloudera/Desktop/Assignmentbdc/Assignmentbdc/vocab.txt")
+
+val doc = lines.map(_.split(" ")).map(x => (x(1).toInt, x(2).toInt)).groupByKey()
+val voc = line.zipWithIndex.map(y => (y._2.toInt + 1, y._1))
+val res = doc.join(voc)
+val grr = res.map(x => (x._2))
+val da = grr.map(x => (x._2, x._1.reduce(_+_))).sortBy(x => x._1, true)
+res.collect.foreach(println)
+val output = da.saveAsTextFile("file:/home/cloudera/Desktop/Assignmentbdc/Assignmentbdc/Task3a_spark/output/task3a.txt")

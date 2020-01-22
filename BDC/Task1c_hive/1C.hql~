@@ -1,0 +1,62 @@
+DROP TABLE myinput;
+DROP TABLE finale;
+DROP TABLE yesCount;
+DROP TABLE totalCount;
+DROP TABLE final;
+
+CREATE TABLE myinput (age INT, job STRING, marital STRING, education STRING, default STRING, balance INT, housing STRING, loan INT, contact STRING, day INT, month STRING, duration INT, campaign INT, pdays INT, previous INT, poutcome STRING, termdeposit STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;';
+
+
+-- Load the text from the local filesystem
+LOAD DATA LOCAL INPATH '../bank-full.csv'
+	INTO TABLE myinput;
+
+-- Table containing all the words in the myinput table
+-- The difference between this table and myinput is that myinput stores each line as a separate row
+-- whereas mywords stores each word as a separate row.
+-- CREATE TABLE mywords AS
+-- SELECT EXPLODE(SPLIT(LCASE(REGEXP_REPLACE(line,'[\\p{Punct},\\p{Cntrl}]','')),' ')) AS word
+-- FROM myinput;
+ 
+
+CREATE TABLE yesCount AS
+SELECT loan, count(1) AS count 
+FROM myinput
+WHERE loan LIKE "\"yes\""
+GROUP BY loan;
+
+CREATE TABLE totalCount AS
+SELECT loan, count(1) AS count2
+FROM myinput
+GROUP BY loan;
+
+/*
+CREATE TABLE final AS
+SELECT noCount.count, totalCount,100.0*(count)/(count2) AS percent
+FROM noCount LEFT OUTER JOIN totalCount
+ON (noCount = totalCount);*/
+-- WHERE noCount = totalCount;
+
+
+Create Table finale AS
+Select n.martial, ((100 * n.count)/t.count2)
+From noCount n, totalCount t
+Where n.loan = t.loan
+
+
+/*
+-- Create a table
+CREATE TABLE res AS
+SELECT marital, percent
+FROM myinput LEFT OUTER JOIN percent
+ON (marital = percent)
+GROUP BY marital;
+*/
+
+
+-- Dump the output to file
+INSERT OVERWRITE LOCAL DIRECTORY './out/'
+ROW FORMAT DELIMITED
+	FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE
+	SELECT * FROM res;

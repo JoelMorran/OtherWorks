@@ -1,0 +1,1 @@
+res1: Array[(String, Int)] = Array((followfriday,94382))
