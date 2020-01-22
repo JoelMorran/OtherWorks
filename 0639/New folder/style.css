@@ -1,0 +1,119 @@
+
+body
+{
+   background-color: #5C0000;
+}
+.banner
+{
+   background-color : #5C0000;
+   text-align : center;
+   font-size : 250%;
+   
+
+}
+.navbar
+{
+float : left;
+width : 210px;
+        background-color : #5C0000;
+        min-height : 1000px;
+
+}
+
+.navbar a
+{
+	color: white;
+}
+.banner4
+{
+float : right;
+width : 200px;
+        background-color : #5C0000;
+        min-height : 1000px;
+}
+
+.mainhome
+{
+   color : white;
+   background-color : black;
+   margin-left : 210px;
+   margin-right: 210px;
+   background-size : 100%;
+   min-height : 500px;
+   
+}
+
+.main
+{
+
+   color : black; 
+   font-weight:900;
+   
+   /*margin:auto;*/
+   margin-left : 210px;
+   margin-right: 210px;
+   background: url('RomanFlag.jpg');
+   
+  
+   background-size: 100%;
+   min-height : 500px;
+   
+}
+.commentboxdisplay
+{
+color : black;
+        background-color : white;
+
+        margin:auto;
+      height : auto;
+       
+       width: auto;
+           max-width: 100%;
+        max-height : 100px;
+
+overflow : scroll;
+
+}
+.commentbox
+{
+color : black;
+margin:auto;
+      height : auto;
+       
+       width: auto;
+           max-width: 100%;
+}
+.comment2
+{
+   border : 2px solid;
+   }
+   .pic
+   {
+      display:block;
+      margin:auto;
+      height : auto;
+       max-height:100%;
+       width: auto;
+           max-width: 100%;
+
+   }
+.hitcount
+{
+  
+color : black;
+}
+.hitcount2
+{
+  
+color : white;
+}
+.form
+{
+font-weight:900;
+color : black;
+}
+.form2
+{
+font-weight:900;
+color : black;
+}

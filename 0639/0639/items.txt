@@ -1,0 +1,42 @@
+Amphora 15.35 Genua
+Amphora 15.35 Naissus
+Barley 3.55 Neapolis
+Bread 0.15 Ancyra
+Bread 0.15 Roma
+Bread 0.15 Viminacium
+Brick 0.5 Viminacium
+Bronze 14.78 Isca Silurum
+Candle 0.1 Iconium
+Candle 0.1 Venta Belgarum
+Cart 75.5 Venta Belgarum
+Chariot 500.5 Naissus
+Chariot 500.5 Venta Belgarum
+Coat-Leather 40 Ancyra
+Concrete 4.6 Deva
+Concrete 4.6 Venta Belgarum
+Dress-Silk 1500 Naissus
+Dress-Silk 1500 Roma
+Dress-Wool 36.5 Deva
+Drinking glass 5.5 Neapolis
+Drinking glass 5.5 Roma
+Fine Tableware 120.55 Viminacium
+Fish Sauce 5.78 Genua
+Glass-Decorative 50.75 Ancyra
+Glass-Decorative 50.75 Iconium
+Glass-Gold 2050 Viminacium
+Glass-Window 16.25 Genua
+Ink 4.25 Londinium
+Parchment 6.9 Londinium
+Parchment 6.9 Naissus
+Sail 500 Genua
+Shield 23.6 Iconium
+Shield 23.6 Isca Silurum
+Toga-Wool 25.8 Deva
+Vinegar 1.25 Neapolis
+Wheat 2.65 Naissus
+bob 0.001 Ancyra
+
+12 12 Ancyra
+
+lol 12.045 Ancyra
+

@@ -1,0 +1,7 @@
+Amphora 15.35 Genua
+Amphora 15.35 Naissus
+Barley 3.55 Neapolis
+Bread 0.15 Ancyra
+Bread 0.15 Roma
+Bread 0.15 Viminacium
+Brick 0.5 Viminacium
